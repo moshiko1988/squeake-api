@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :body, :post, :user
+  attributes :id, :body, :post, :user, :editable
+
+  def editable
+    scope == object.user
+  end
 
   def post
     object.post.id
