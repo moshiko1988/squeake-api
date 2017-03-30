@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :posts, :comments
+  attributes :id, :email, :posts, :comments, :full_name
 
   def posts
     object.posts.pluck(:id)

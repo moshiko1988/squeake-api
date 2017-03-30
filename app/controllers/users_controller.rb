@@ -45,7 +45,7 @@ class UsersController < ProtectedController
   end
 
   def index
-    render json: User.all
+    render json: current_user
   end
 
   def show
@@ -61,7 +61,7 @@ class UsersController < ProtectedController
 
   def user_creds
     params.require(:credentials)
-          .permit(:email, :password, :password_confirmation)
+          .permit(:email, :password, :password_confirmation, :full_name)
   end
 
   def pw_creds
