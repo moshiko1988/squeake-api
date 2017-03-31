@@ -15,11 +15,19 @@ Squeakr is a Web app that allows you to posts and share anything you like
 - [Wireframes](https://imgur.com/a/0YOgI)
 [ERD](http://i.imgur.com/r5Oit6H.png)
 
-### Resources used
-- Ruby on Rails
-- Bootstrap
-- Ember
-- PostgreSQL
+### Technologies used
+- Ember.js
+- I used ember to create front end of the app.
+- Ruby in Rails
+- I used Ruby on Rails for the back end.
+- postgreSQL
+- I used postgreSQL to store the data of the app.
+
+## General approach
+
+When I started planning the app I was working on the wireframes and the user stories first. I made sure how the app relationships and resources should look like.
+
+Then I worked on the back end to build the general structure of the app and the relationships and then I started working on the front end, I choose to build the front end with ember.js.
 
 ## Routes
 
@@ -34,3 +42,8 @@ Squeakr is a Web app that allows you to posts and share anything you like
 | GET | `/posts/:id` | `posts#show` |
 | PATCH | `/posts` | `posts#update` |
 | DELETE | `/posts` | `posts#destroy` |
+
+
+####  Unsolved problems
+
+Adding pictures and dates in a post/comment.
