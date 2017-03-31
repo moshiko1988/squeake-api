@@ -25,14 +25,6 @@ ActiveRecord::Schema.define(version: 20170328142237) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "examples", force: :cascade do |t|
-    t.text     "text",       null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_examples_on_user_id", using: :btree
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "title",      null: false
     t.string   "body",       null: false
@@ -55,6 +47,5 @@ ActiveRecord::Schema.define(version: 20170328142237) do
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "examples", "users"
   add_foreign_key "posts", "users"
 end
